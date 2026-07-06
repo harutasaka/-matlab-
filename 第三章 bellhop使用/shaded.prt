@@ -1,0 +1,185 @@
+ BELLHOP/BELLHOP3D
+
+ BELLHOP- Shaded point source in free space                                      
+ frequency =   100.0     Hz
+
+ Dummy parameter NMedia =            1
+
+     C-linear approximation to SSP
+     Attenuation units: dB/mkHz
+
+
+   z (m)     alphaR (m/s)   betaR  rho (g/cm^3)  alphaI     betaI
+
+     ACOUSTO-ELASTIC half-space
+      0.00      1500.00      0.00     1.00       0.0000    0.0000
+
+ Depth =    5000.00 m
+
+ Sound speed profile:
+   z (m)     alphaR (m/s)   betaR  rho (g/cm^3)  alphaI     betaI
+
+  -5000.00      1500.00      0.00     1.00       0.0000    0.0000
+   5000.00      1500.00      0.00     1.00       0.0000    0.0000
+
+                                 ( RMS roughness =   0.00     )
+     ACOUSTO-ELASTIC half-space
+      0.00      1500.00      0.00     1.00       0.0000    0.0000
+
+ __________________________________________________________________________
+
+ Number of Source   depths, Sz =            1
+ Source   depths, Sz (m)
+   0.00000    
+
+
+ __________________________________________________________________________
+
+ Number of Receiver depths, Rz =          501
+ Receiver depths, Rz (m)
+  -5000.00      -4980.00      -4960.00      -4940.00      -4920.00    
+  -4900.00      -4880.00      -4860.00      -4840.00      -4820.00    
+          ... 
+   5000.00    
+
+
+ __________________________________________________________________________
+
+ Number of Receiver ranges, Rr =          501
+ Receiver ranges, Rr (km)
+  -10.0000      -9.96000      -9.92000      -9.88000      -9.84000    
+  -9.80000      -9.76000      -9.72000      -9.68000      -9.64000    
+          ... 
+   10.0000    
+
+
+ Coherent TL calculation
+ Geometric hat beams in Cartesian coordinates
+ Point source (cylindrical coordinates)
+ Rectilinear receiver grid: Receivers at Rr( : ) x Rz( : )
+ __________________________________________________________________________
+
+ Number of beams in elevation   =          360
+ Beam take-off angles (degrees)
+  -180.000      -179.000      -178.000      -177.000      -176.000    
+  -175.000      -174.000      -173.000      -172.000      -171.000    
+          ... 
+   179.000    
+
+ __________________________________________________________________________
+
+
+ Step length,       deltas =   0.000     m
+
+ Maximum ray depth, Box%z  =   5001.     m
+ Maximum ray range, Box%r  =   10.00    km
+ No beam shift in effect
+
+
+ ______________________________
+ Using source beam pattern file
+ Number of source beam pattern points          37
+
+  Angle (degrees)  Power (dB)
+  -180.       10.0    
+  -170.      -10.0    
+  -160.       0.00    
+  -150.      -20.0    
+  -140.      -10.0    
+  -130.      -30.0    
+  -120.      -20.0    
+  -110.      -40.0    
+  -100.      -30.0    
+  -90.0      -50.0    
+  -80.0      -30.0    
+  -70.0      -40.0    
+  -60.0      -20.0    
+  -50.0      -30.0    
+  -40.0      -10.0    
+  -30.0      -20.0    
+  -20.0       0.00    
+  -10.0      -10.0    
+   0.00       10.0    
+   10.0      -10.0    
+   20.0       0.00    
+   30.0      -20.0    
+   40.0      -10.0    
+   50.0      -30.0    
+   60.0      -20.0    
+   70.0      -40.0    
+   80.0      -30.0    
+   90.0      -50.0    
+   100.      -30.0    
+   110.      -40.0    
+   120.      -20.0    
+   130.      -30.0    
+   140.      -10.0    
+   150.      -20.0    
+   160.       0.00    
+   170.      -10.0    
+   180.       10.0    
+
+ Step length,       deltas =   1000.     m (automatically selected)
+
+ Warning in BELLHOP : Too few beams
+ Nalpha should be at least =          398
+Tracing beam       1   -180.00
+
+ Geometric hat beams                     
+ halfwidth  =    273.56719583431078     
+ epsilonOpt =  (  0.0000000000000000     ,  23511368.601802275     )
+ EpsMult    =    1.0000000000000000     
+
+Tracing beam       8   -173.00
+Tracing beam      15   -166.00
+Tracing beam      22   -159.00
+Tracing beam      29   -152.00
+Tracing beam      36   -145.00
+Tracing beam      43   -138.00
+Tracing beam      50   -131.00
+Tracing beam      57   -124.00
+Tracing beam      64   -117.00
+Tracing beam      71   -110.00
+Tracing beam      78   -103.00
+Tracing beam      85    -96.00
+Tracing beam      92    -89.00
+Tracing beam      99    -82.00
+Tracing beam     106    -75.00
+Tracing beam     113    -68.00
+Tracing beam     120    -61.00
+Tracing beam     127    -54.00
+Tracing beam     134    -47.00
+Tracing beam     141    -40.00
+Tracing beam     148    -33.00
+Tracing beam     155    -26.00
+Tracing beam     162    -19.00
+Tracing beam     169    -12.00
+Tracing beam     176     -5.00
+Tracing beam     183      2.00
+Tracing beam     190      9.00
+Tracing beam     197     16.00
+Tracing beam     204     23.00
+Tracing beam     211     30.00
+Tracing beam     218     37.00
+Tracing beam     225     44.00
+Tracing beam     232     51.00
+Tracing beam     239     58.00
+Tracing beam     246     65.00
+Tracing beam     253     72.00
+Tracing beam     260     79.00
+Tracing beam     267     86.00
+Tracing beam     274     93.00
+Tracing beam     281    100.00
+Tracing beam     288    107.00
+Tracing beam     295    114.00
+Tracing beam     302    121.00
+Tracing beam     309    128.00
+Tracing beam     316    135.00
+Tracing beam     323    142.00
+Tracing beam     330    149.00
+Tracing beam     337    156.00
+Tracing beam     344    163.00
+Tracing beam     351    170.00
+Tracing beam     358    177.00
+
+ CPU Time =       0.781E-01s
