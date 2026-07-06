@@ -1,0 +1,14 @@
+b0 = 0.05;
+b1 = [1 1];
+b2 = [1 -1.01 1];
+a1 = [1 -0.66];
+a2 = [1 -1.44 0.77];
+b = b0*conv(b1,b2);
+a = conv(a1,a2);
+[h,w] = freqz(b,a,'whole',2001);
+plot(w/pi,20*log10(abs(h)));
+ax = gca;
+ax.YLim = [-100 20];
+ax.XTick = 0:.5:2;
+xlabel('归一化频率(\time\pi rad/sample)');
+ylabel('幅度(dB)');

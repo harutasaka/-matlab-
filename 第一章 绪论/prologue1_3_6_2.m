@@ -1,0 +1,10 @@
+outhi = filter(bhi,1,y);
+subplot(211);
+plot(t,y);
+title('Original Signal');
+ys = ylim;
+subplot(212);
+plot(t,outhi);
+title('Highpass Flitered Signal');
+xlabel('Time(s)');
+ylim(ys);
