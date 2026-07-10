@@ -1,0 +1,10 @@
+M = 4;
+msg = randi([0 M-1],5e3,1);
+hMod = comm.QPSKModulator('PhaseOffset',0);
+modmsg = step(hMod,msg);
+chan = [.986;.845;.237;.123+.31i];
+rxsig = filter(chan,1,modmsg);
+filtmsg = rxsig+0.1*randn(size(rxsig))+0.1j*randn(size(rxsig));
+dfeObj = dfe(5,3,lms(0.03));
+dfeObj.SigConst = step(hMod,(0:M-1)')';
+dfeOb.Weig

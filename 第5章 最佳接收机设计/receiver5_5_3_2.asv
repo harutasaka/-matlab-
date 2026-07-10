@@ -1,0 +1,39 @@
+clear;
+clc;
+close all;
+trainL = 200;
+M = 2;
+hMode = comm.BPSKModulator;
+msg = randi([0 1],1000,1);
+x= step(hMode,msg);
+rxsig = filter([1+.5*j 0.8-.2*j 0.3+.1*j],1,x);
+rxsig = rxsig+0.15*randn(size(rxsig))+0.15j*randn(size(rxsig));
+
+
+
+
+eqlms = comm.LinearEqualizer(...
+    'Algorithm', 'LMS', ...           % LMS算法
+    'NumTaps', 8, ...                 % 8个抽头
+    'StepSize', 0.02, ...             % 步长
+    'Constellation', [-1+0j, 1+0j], ...      % BPSK星座点
+    'ReferenceTap', 4); 
+
+% 构造参考信号：前200个已知，后面用占位（会被忽略）
+ref = [x(1:trainL); nan(length(rxsig)-trainL, 1)];
+[y_all, ~] = eqlms(rxsig, ref);
+
+% 提取训练后的均衡输出
+y = y_all;  % 整个均衡输出
+yd = y_all;  % 判决反馈输出（系统对象内部自动判决）
+
+demodmsg = step(hDemod,yd);
+hErrorCalc = comm.ErrorRate;
+reset(hErrorCalc);
+ser_Eq = step(hErrorCalc,msg(trainL+1:end),demodmsg(trainL+1:end));
+h = scatterplot(rxsig,1,trainL,'bx');
+hold on;
+scatterplot(y,1,trainL,'g.',h);
+axis('tight');
+legend('接受信号','均衡后的信号','Location','se');
+title(['BER=',num2str(ser_Eq(1))]);

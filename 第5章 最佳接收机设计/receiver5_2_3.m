@@ -1,0 +1,14 @@
+rf = 0.5;
+span = 4;
+sps = 3;
+h1 = rcosdesign(rf,span,sps,'normal');
+h2 = rcosdesign(rf,span,sps,'sqrt');
+h3 = conv(h2,h2);
+p2 = ceil(length(h3)/2);
+m2 = ceil(p2-length(h1)/2);
+M2 = floor(p2+length(h1)/2);
+ct = h3(m2:M2);
+stem([h1/max(abs(h1));ct/max(abs(ct))]','filled');
+xlabel('样本');
+ylabel('归一化幅度');
+legend('h1','h2*h2');
